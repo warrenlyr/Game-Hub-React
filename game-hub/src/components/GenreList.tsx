@@ -13,10 +13,10 @@ import cropImageByUrl from "../services/imageCropByUrl";
 
 interface GenreListProps {
   onSelecteGenre: (genre: GenreData) => void;
-  selectedGenre: GenreData | null;
+  selectedGenreId?: number;
 }
 
-const GenreList = ({ onSelecteGenre: onSelectedGenre, selectedGenre }: GenreListProps) => {
+const GenreList = ({ onSelecteGenre: onSelectedGenre, selectedGenreId }: GenreListProps) => {
   const { data, isLoading, error } = useGenres();
 
   if (error) return <Text>Unable to fetch data</Text>;
@@ -36,7 +36,7 @@ const GenreList = ({ onSelecteGenre: onSelectedGenre, selectedGenre }: GenreList
               objectFit='cover'
             />
             <Button
-              fontWeight={selectedGenre?.id === genre.id ? "bold" : "normal"}
+              fontWeight={selectedGenreId === genre.id ? "bold" : "normal"}
               fontSize="lg"
               variant="link"
               onClick={() => onSelectedGenre(genre)}

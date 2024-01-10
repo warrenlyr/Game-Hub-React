@@ -1,4 +1,4 @@
-import { HStack, Image, Switch, useColorMode } from '@chakra-ui/react'
+import { HStack, Switch, useColorMode } from '@chakra-ui/react'
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 const ColorModeSwitch = () => {

@@ -1,8 +1,25 @@
+import { useParams } from "react-router-dom";
+import useGameDetails from "../hooks/useGameDetails";
+import { Box, Heading, Text } from "@chakra-ui/react";
 
 const GameDetailPage = () => {
-  return (
-    <div>GameDetailPage</div>
-  )
-}
+  // Get the game id from the url
+  const { slug } = useParams<{ slug: string }>();
+  // Get the game details from the api
+  const { data, isLoading, error } = useGameDetails(slug!);
 
-export default GameDetailPage
+  if (isLoading) return <p>Loading...</p>;
+
+  if (error || !data) throw error;
+
+  return (
+    <>
+      <Box padding={5}>
+          <Heading>{data.name}</Heading>
+          <Text>{data.description_raw}</Text>
+      </Box>
+    </>
+  );
+};
+
+export default GameDetailPage;

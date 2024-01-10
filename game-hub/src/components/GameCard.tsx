@@ -3,6 +3,7 @@ import { GameData } from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import cropImageByUrl from "../services/imageCropByUrl";
+import { Link } from "react-router-dom";
 
 interface GameCardProps {
   game: GameData;
@@ -22,7 +23,9 @@ const GameCard = ({ game }: GameCardProps) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize="2xl">{game.name}</Heading>
+        <Heading fontSize="2xl">
+          <Link to={"/games/" + game.slug}>{game.name}</Link>
+        </Heading>
       </CardBody>
     </Card>
   );

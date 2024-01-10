@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import useGameDetails from "../hooks/useGameDetails";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import ExpandableText from "../components/ExpandableText";
+import GameAttributes from "../components/GameAttributes";
 
 const GameDetailPage = () => {
   // Get the game id from the url
@@ -14,12 +15,11 @@ const GameDetailPage = () => {
   if (error || !data) throw error;
 
   return (
-    <>
-      <Box padding={5}>
-          <Heading>{data.name}</Heading>
-          <ExpandableText>{data.description_raw}</ExpandableText>
-      </Box>
-    </>
+    <Box padding={5}>
+      <Heading>{data.name}</Heading>
+      <ExpandableText>{data.description_raw}</ExpandableText>
+      <GameAttributes game={data} />
+    </Box>
   );
 };
 

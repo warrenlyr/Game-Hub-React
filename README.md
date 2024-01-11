@@ -1,5 +1,7 @@
 # Game Hub - React Practice Project
 
+![](https://img.shields.io/badge/React-18.2-blue)![](https://img.shields.io/badge/TypeScript-5.2.2-green)
+
 This repository showcases a frontend client project developed with React 18, primarily intended for learning and practice. The project draws inspiration from [RAWG](https://rawg.io/apidocs), a comprehensive video game database service. Utilizing RAWG's API, this application functions as a game hub platform, emulating RAWG's core features.
 
 In this application, all data fetching is handled directly by React, bypassing a traditional backend setup. While this approach isn't typically best practice, the focus of this project is on frontend capabilities, not backend integration.
@@ -37,4 +39,18 @@ This project serves as an effective demonstration of integrating external APIs (
 
 ### Dark Mode
 
-![]()
+![Dark Mode](./assets/dark_mode.png)
+
+### Light Mode
+
+![Light Mode](./assets/light_mode.png)
+
+### Game Details Page
+
+![Game Details](./assets/game_details.png)
+
+### Device View
+
+![Device View Homepage](./assets/device_view_homepage.png)
+
+![Device View Game Details](./assets/device_view_game_details.png)

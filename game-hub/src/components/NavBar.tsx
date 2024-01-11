@@ -1,5 +1,5 @@
 import { HStack } from "@chakra-ui/react";
-import { FaXTwitter } from "react-icons/fa6";
+import { PiGameControllerFill } from "react-icons/pi";
 import ColorModeSwitch from "./ColorModeSwitch";
 import { IconContext } from "react-icons";
 import SearchInput from "./SearchInput";
@@ -10,7 +10,7 @@ const NavBar = () => {
     <HStack padding="0.75rem">
       <Link to='/'>
         <IconContext.Provider value={{ size: "2em" }}>
-          <FaXTwitter />
+          <PiGameControllerFill />
         </IconContext.Provider>
       </Link>
       <SearchInput />

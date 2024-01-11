@@ -1,4 +1,4 @@
-import { GameData } from "../entities/GameData";
+import GameData from "../entities/GameData";
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";

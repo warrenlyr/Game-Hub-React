@@ -1,7 +1,7 @@
-import { GenreData } from "./GenreData";
-import { Platform } from "./Platform";
+import GenreData from "./GenreData";
+import Platform from "./Platform";
 
-export interface GameData {
+export default interface GameData {
   id: number;
   name: string;
   slug: string;
